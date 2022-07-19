@@ -1,15 +1,18 @@
-#video-grid{
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#video-grid {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
- }
- 
- video{
+}
+
+video {
     height: 300px;
     width: 400px;
     object-fit: cover;
-    padding: 8px;
- } 
+}
 
 .main {
     height: 100vh;
@@ -23,7 +26,11 @@
 }
 
 .main__right {
-    flex: 0.2
+    flex: 0.2;
+    display: flex;
+    flex-direction: column;
+    background-color: #242324;
+    border-left: 1px solid #3D3D42;
 }
 
 .main__videos {
@@ -32,16 +39,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
-}
-
-.main__controls {
-    background-color: #1C1E20;
-}
-
-.main__right {
-    background-color: #242324;
-    border-left: 1px solid #3D3D42;
 }
 
 .main__controls {
@@ -49,6 +46,7 @@
     display: flex;
     justify-content: space-between;
     padding: 5px;
+    background-color: #1C1E20;
 }
 
 .main__controls__block {
@@ -70,29 +68,9 @@
     border-radius: 5px;
 }
 
+
 .main__controls__button i {
     font-size: 24px;
-}
-
-.main__right {
-    display: flex;
-    flex-direction: column;
-}
-
-.main__header {
-    padding-top: 5px;
-    color: #F5F5F5;
-    text-align: center;
-}
-
-.main__chat_window {
-    flex-grow: 1;
-    overflow-y: auto;
-}
-
-.messages{
-    color: white;
-    list-style: none;
 }
 
 .main__message_container {
@@ -113,4 +91,19 @@
 
 .unmute, .stop {
     color: #CC3B33;
+}
+
+.main__header {
+    padding-top: 5px;
+    color: #F5F5F5;
+    text-align: center;
+}
+
+.main__chat_window {
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+.messages {
+    color: white;
+    list-style: none;
 }
